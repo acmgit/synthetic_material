@@ -1,5 +1,5 @@
 minetest.register_craft({
-	output = "default:clay_lump",
+	output = "default:clay_lump 4",
 	recipe = {
 		{"default:dirt", "group:sand", "default:dirt"},
 		{"group:sand", "bucket:bucket_water", "group:sand"},
