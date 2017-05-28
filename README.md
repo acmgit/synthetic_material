@@ -2,10 +2,10 @@
 
 A Mod for Minetest, where you can craft Clay.
 
-#Depends:
+#Depends
 
 default
 
-#License:
+#License
 
 License: WTFPL
