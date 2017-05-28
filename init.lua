@@ -7,3 +7,11 @@ minetest.register_craft({
 	},
 	replacements = {{"bucket:bucket_water", "bucket:bucket_empty"}}
 })
+
+minetest.register_craft({
+	output = "default:snowblock",
+	recipe = {
+		{"default:mese_crystal_fragment", "bucket:bucket_water", "default:mese_crystal_fragment"}
+	},
+	replacements = {{"bucket:bucket_water", "bucket:bucket_empty"}}
+})
