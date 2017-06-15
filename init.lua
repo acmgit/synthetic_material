@@ -109,3 +109,24 @@ minetest.register_craft({
 			{"bucket:bucket_river_water", "bucket:bucket_empty"},
 			{"homedecor:refrigerator_white", "homedecor:refrigerator_white"}}
 })
+
+minetest.register_craft({
+	output = "default:dirt_with_dry_grass",
+	recipe = {
+		{"default:dry_shrub", "default:dirt", ""}
+	}
+})
+
+minetest.register_craft({
+	output = "default:dirt_with_snow",
+	recipe = {
+		{"default:snow", "default:dirt", ""}
+	}
+})
+
+minetest.register_craft({
+	output = "default:dirt_with_rainforest_litter",
+	recipe = {
+		{"default:jungleleaves", "default:dirt", ""}
+	}
+})
