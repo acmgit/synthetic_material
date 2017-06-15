@@ -1,11 +1,13 @@
-# Synthetic Clay
+# Synthetic Materials
 
-A Mod for Minetest, where you can craft Clay.
+A Mod for Minetest, where you can craft synthetic Materials.
 
-#Depends
+ Clay<br>
+ Snow
 
-default
-
-#License
+Depends:<br>
+default<br>
+Optional:<br>
+homedecor
 
 License: WTFPL
