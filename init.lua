@@ -55,62 +55,6 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "default:snowblock",
-	recipe = {
-		{"", "bucket:bucket_water", ""},
-		{"bucket:bucket_water", "homedecor:refrigerator_steel", "bucket:bucket_water"},
-		{"", "bucket:bucket_water", ""}
-	},
-	replacements = {{"bucket:bucket_water", "bucket:bucket_empty"},
-			{"bucket:bucket_water", "bucket:bucket_empty"},
-			{"bucket:bucket_water", "bucket:bucket_empty"},
-			{"bucket:bucket_water", "bucket:bucket_empty"},
-			{"homedecor:refrigerator_steel", "homedecor:refrigerator_steel"}}
-})
-
-minetest.register_craft({
-	output = "default:snowblock",
-	recipe = {
-		{"", "bucket:bucket_river_water", ""},
-		{"bucket:bucket_river_water", "homedecor:refrigerator_steel", "bucket:bucket_river_water"},
-		{"", "bucket:bucket_river_water", ""}
-	},
-	replacements = {{"bucket:bucket_river_water", "bucket:bucket_empty"},
-			{"bucket:bucket_river_water", "bucket:bucket_empty"},
-			{"bucket:bucket_river_water", "bucket:bucket_empty"},
-			{"bucket:bucket_river_water", "bucket:bucket_empty"},
-			{"homedecor:refrigerator_steel", "homedecor:refrigerator_steel"}}
-})
-
-minetest.register_craft({
-	output = "default:snowblock",
-	recipe = {
-		{"", "bucket:bucket_water", ""},
-		{"bucket:bucket_water", "homedecor:refrigerator_white", "bucket:bucket_water"},
-		{"", "bucket:bucket_water", ""}
-	},
-	replacements = {{"bucket:bucket_water", "bucket:bucket_empty"},
-			{"bucket:bucket_water", "bucket:bucket_empty"},
-			{"bucket:bucket_water", "bucket:bucket_empty"},
-			{"bucket:bucket_water", "bucket:bucket_empty"},
-			{"homedecor:refrigerator_white", "homedecor:refrigerator_white"}}
-})
-
-minetest.register_craft({
-	output = "default:snowblock",
-	recipe = {
-		{"", "bucket:bucket_river_water", ""},
-		{"bucket:bucket_river_water", "homedecor:refrigerator_white", "bucket:bucket_river_water"},
-		{"", "bucket:bucket_river_water", ""}
-	},
-	replacements = {{"bucket:bucket_river_water", "bucket:bucket_empty"},
-			{"bucket:bucket_river_water", "bucket:bucket_empty"},
-			{"bucket:bucket_river_water", "bucket:bucket_empty"},
-			{"bucket:bucket_river_water", "bucket:bucket_empty"},
-			{"homedecor:refrigerator_white", "homedecor:refrigerator_white"}}
-})
-
-minetest.register_craft({
 	output = "default:dirt_with_dry_grass",
 	recipe = {
 		{"default:dry_shrub", "default:dirt", ""}
@@ -130,3 +74,63 @@ minetest.register_craft({
 		{"default:jungleleaves", "default:dirt", ""}
 	}
 })
+
+if minetest.get_modpath("homedecor") then
+
+	minetest.register_craft({
+		output = "default:snowblock",
+		recipe = {
+			{"", "bucket:bucket_water", ""},
+			{"bucket:bucket_water", "homedecor:refrigerator_steel", "bucket:bucket_water"},
+			{"", "bucket:bucket_water", ""}
+		},
+		replacements = {{"bucket:bucket_water", "bucket:bucket_empty"},
+				{"bucket:bucket_water", "bucket:bucket_empty"},
+				{"bucket:bucket_water", "bucket:bucket_empty"},
+				{"bucket:bucket_water", "bucket:bucket_empty"},
+				{"homedecor:refrigerator_steel", "homedecor:refrigerator_steel"}}
+	})
+
+	minetest.register_craft({
+		output = "default:snowblock",
+		recipe = {
+			{"", "bucket:bucket_river_water", ""},
+			{"bucket:bucket_river_water", "homedecor:refrigerator_steel", "bucket:bucket_river_water"},
+			{"", "bucket:bucket_river_water", ""}
+		},
+		replacements = {{"bucket:bucket_river_water", "bucket:bucket_empty"},
+				{"bucket:bucket_river_water", "bucket:bucket_empty"},
+				{"bucket:bucket_river_water", "bucket:bucket_empty"},
+				{"bucket:bucket_river_water", "bucket:bucket_empty"},
+				{"homedecor:refrigerator_steel", "homedecor:refrigerator_steel"}}
+	})
+
+	minetest.register_craft({
+		output = "default:snowblock",
+		recipe = {
+			{"", "bucket:bucket_water", ""},
+			{"bucket:bucket_water", "homedecor:refrigerator_white", "bucket:bucket_water"},
+			{"", "bucket:bucket_water", ""}
+		},
+		replacements = {{"bucket:bucket_water", "bucket:bucket_empty"},
+				{"bucket:bucket_water", "bucket:bucket_empty"},
+				{"bucket:bucket_water", "bucket:bucket_empty"},
+				{"bucket:bucket_water", "bucket:bucket_empty"},
+				{"homedecor:refrigerator_white", "homedecor:refrigerator_white"}}
+	})
+
+	minetest.register_craft({
+		output = "default:snowblock",
+		recipe = {
+			{"", "bucket:bucket_river_water", ""},
+			{"bucket:bucket_river_water", "homedecor:refrigerator_white", "bucket:bucket_river_water"},
+			{"", "bucket:bucket_river_water", ""}
+		},
+		replacements = {{"bucket:bucket_river_water", "bucket:bucket_empty"},
+				{"bucket:bucket_river_water", "bucket:bucket_empty"},
+				{"bucket:bucket_river_water", "bucket:bucket_empty"},
+				{"bucket:bucket_river_water", "bucket:bucket_empty"},
+				{"homedecor:refrigerator_white", "homedecor:refrigerator_white"}}
+	})
+
+end -- minetest.get_modpath("homedecor")
