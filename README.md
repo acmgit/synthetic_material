@@ -6,9 +6,10 @@ A Mod for Minetest, where you can craft synthetic Materials.
  Snow<br>
  Dirt<br>
 
-Depends:<br>
+## Depends:<br>
 default<br>
-Optional:<br>
+## Optional:<br>
 homedecor
 
-License: WTFPL
+## License: 
+WTFPL
