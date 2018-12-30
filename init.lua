@@ -61,6 +61,28 @@ minetest.register_craft({
 	},
 })
 
+minetest.register_craft({
+    output = "default:dirt_with_dry_grass",
+	recipe = {
+		{"default:dry_shrub", "default:dirt", ""}
+	}
+})
+
+minetest.register_craft({
+	output = "default:dirt_with_snow",
+	recipe = {
+		{"default:snow", "default:dirt", ""}
+	}
+})
+
+minetest.register_craft({
+	output = "default:dirt_with_rainforest_litter",
+	recipe = {
+		{"default:jungleleaves", "default:dirt", ""}
+	}
+})
+
+
 if(minetest.get_modpath("homedecor")) then
     
     minetest.register_craft({
