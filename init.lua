@@ -82,6 +82,86 @@ minetest.register_craft({
 	}
 })
 
+minetest.register_craft({
+	output = "dye:cyan 2",
+	recipe = {
+		{"default:coral_cyan"}
+	}
+})
+
+minetest.register_craft({
+	output = "dye:magenta 2",
+	recipe = {
+		{"default:coral_pink"}
+	}
+})
+
+minetest.register_craft({
+	output = "dye:dark_green 2",
+	recipe = {
+		{"default:coral_green"}
+	}
+})
+
+minetest.register_craft({
+	output = "default:coral_brown",
+	recipe = {
+		{"default:coral_skeleton", "dye:brown"}
+	}
+})
+
+minetest.register_craft({
+	output = "default:coral_orange",
+	recipe = {
+		{"default:coral_skeleton", "dye:orange"}
+	}
+})
+
+local search_nearby_nodes = function(pos, node)
+		if minetest.get_node({x=pos.x-1, y=pos.y, z=pos.z}).name == node then return true end
+		if minetest.get_node({x=pos.x+1, y=pos.y, z=pos.z}).name == node then return true end
+		if minetest.get_node({x=pos.x, y=pos.y-1, z=pos.z}).name == node then return true end
+		if minetest.get_node({x=pos.x, y=pos.y+1, z=pos.z}).name == node then return true end
+		if minetest.get_node({x=pos.x, y=pos.y, z=pos.z-1}).name == node then return true end
+		if minetest.get_node({x=pos.x, y=pos.y, z=pos.z+1}).name == node then return true end
+		return false
+        
+	end -- search_nearby_nodes = function
+
+default.cool_lava = function(pos, node)
+    if node.name == "default:lava_source" then
+        if(search_nearby_nodes(pos,"default:water_source")) then                    -- default:lava_source - default:water_source = default:obsidian
+            minetest.set_node(pos, {name="default:obsidian"})
+
+        elseif(search_nearby_nodes(pos,"default:river_water_source")) then          -- default:lava_source - default:river_water_source  = default:desert_stone
+            minetest.set_node(pos, {name="default:desert_stone"})
+            
+        elseif(search_nearby_nodes(pos,"default:water_flowing")) then               -- default:lava_source - default:water_flowing = default:cobble
+            minetest.set_node(pos, {name="default:cobble"})
+              
+        elseif(search_nearby_nodes(pos,"default:river_water_flowing")) then         -- default:lava_source - default:river_water_flowing = default:desert_cobble
+            minetest.set_node(pos, {name="default:desert_cobble"})
+                            
+        end
+              
+    else -- Lava flowing
+        if(search_nearby_nodes(pos,"default:water_source")) then                    -- default:lava_flowing - default:water_source = default:stone
+            minetest.set_node(pos, {name="default:stone"})
+          
+        elseif(search_nearby_nodes(pos,"default:water_flowing")) then               -- default:lava_flowing - default:water_flowing = default:sand
+            minetest.set_node(pos, {name="default:sand"})
+              
+        elseif(search_nearby_nodes(pos,"default:river_water_source")) then          -- default:lava_flowing - default:river_water_source = default:desert_stone
+            minetest.set_node(pos, {name="default:desert_stone"})
+              
+        elseif(search_nearby_nodes(pos,"default:river_water_flowing")) then         -- default:lava_flowing - default:river_water_flowing = default:silver_sand
+            minetest.set_node(pos, {name="default:silver_sand"})
+              
+        end
+              
+    end -- if(node.name ==
+              
+end -- default.cool_lava =
 
 if(minetest.get_modpath("homedecor")) then
     
@@ -143,7 +223,16 @@ if(minetest.get_modpath("homedecor")) then
     })-- default:snowblock
 
 end -- if(get_modpath("homedecor
-    
+
+minetest.register_craft({
+	output = "bones:bones 3",
+	recipe = {
+		{"default:clay_lump","default:clay_lump","default:clay_lump"},
+		{"","default:clay_lump",""},
+		{"default:clay_lump","default:clay_lump","default:clay_lump"}
+	}
+})
+
 if (minetest.get_modpath("basic_materials")) then
     minetest.register_craft({
 	output = "bucket:bucket_empty",
