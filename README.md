@@ -1,15 +1,19 @@
 # Synthetic Materials
 
-A Mod for Minetest, where you can craft synthetic Materials.
-
- Clay<br>
- Snow<br>
- Dirt<br>
+A Mod for Minetest, where you can add missing recipies for various mods to craft synthetic Materials.
 
 ## Depends:<br>
-default<br>
+
 ## Optional:<br>
-homedecor
+basic_materials<br>
+bones<br>
+bucket<br>
+caverealms<br>
+default<br>
+dye<br>
+farming<br>
+homedecor<br>
+technic<br>
 
 ## License: 
-WTFPL
+GPL 3.0
