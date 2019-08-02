@@ -9,6 +9,7 @@ basic_materials<br>
 bones<br>
 bucket<br>
 caverealms<br>
+drawers<br>
 default<br>
 dye<br>
 farming<br>

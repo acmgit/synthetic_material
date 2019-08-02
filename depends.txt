@@ -3,6 +3,7 @@ bones?
 bucket?
 caverealms?
 default?
+drawers?
 dye?
 farming?
 homedecor?
