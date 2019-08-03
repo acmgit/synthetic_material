@@ -12,3 +12,10 @@ minetest.register_craft({
 })
 
 
+minetest.register_craft({
+    output = "basic_materials:steel_bar 6",
+	recipe = {
+                {"", "default:steel_ingot", ""},
+                {"default:steel_ingot", "", "default:steel_ingot"},
+    }
+})
